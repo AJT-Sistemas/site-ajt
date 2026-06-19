@@ -1,23 +1,330 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJT LTDA</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJT Sistemas e Serviços — Sistemas web, integrações e APIs sob medida</title>
+  <meta name="description" content="A AJT Sistemas e Serviços projeta, desenvolve e integra soluções digitais sob demanda — e cria seus próprios produtos, como o EduGest.">
+  <link rel="icon" type="image/png" href="assets/ajt-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to AJT LTDA</h1>
-    </header>
-    <nav>
-        <!-- Add your navigation links here -->
-    </nav>
-    <main>
-        <!-- Add your main content here -->
-    </main>
-    <footer>
-        <p>&copy; 2024 AJT LTDA. All rights reserved.</p>
-    </footer>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="site-header">
+    <div class="nav-inner">
+      <button class="brand" data-go="inicio">
+        <img class="brand-icon" src="assets/ajt-icon.png" alt="AJT">
+        <span class="brand-text">
+          <span class="brand-name">AJT</span>
+          <span class="brand-sub">SISTEMAS E SERVIÇOS</span>
+        </span>
+      </button>
+      <nav class="nav">
+        <button class="nav-link" data-go="inicio">Início<span class="underline"></span></button>
+        <button class="nav-link" data-go="servicos">Serviços<span class="underline"></span></button>
+        <button class="nav-link" data-go="produtos">Produtos<span class="underline"></span></button>
+        <button class="nav-link" data-go="equipe">Equipe<span class="underline"></span></button>
+        <button class="nav-link" data-go="contato">Contato<span class="underline"></span></button>
+      </nav>
+      <button class="btn-primary is-nav" data-go="contato">Fale conosco</button>
+    </div>
+  </header>
+
+  <!-- ===================== INÍCIO ===================== -->
+  <main class="page" id="page-inicio">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="eyebrow"><span class="dot"></span>Desenvolvimento sob demanda</div>
+        <h1 class="hero-title">Sistemas web, integrações e APIs sob medida.</h1>
+        <p class="hero-sub">A AJT Sistemas e Serviços projeta, desenvolve e integra soluções digitais para o seu negócio — e cria seus próprios produtos, como o EduGest.</p>
+        <div class="hero-actions">
+          <button class="btn-primary" data-go="contato">Iniciar um projeto</button>
+          <button class="btn-ghost" data-go="produtos">Conheça o EduGest →</button>
+        </div>
+        <div class="stack-block">
+          <span class="mono-label">// stacks que dominamos</span>
+          <div class="chip-row">
+            <span class="chip">Ruby on Rails</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">React</span>
+            <span class="chip">Java</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">REST APIs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES PREVIEW -->
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <span class="mono-label">// o que fazemos</span>
+          <h2 class="section-title">Soluções construídas em torno do seu problema.</h2>
+        </div>
+        <button class="link-arrow" data-go="servicos">Ver todos os serviços →</button>
+      </div>
+      <div class="card-grid">
+        <div class="card">
+          <span class="card-num">01</span>
+          <h3>Sistemas web sob demanda</h3>
+          <p>Aplicações web completas, do MVP ao produto em produção, sob medida para o seu processo.</p>
+        </div>
+        <div class="card">
+          <span class="card-num">02</span>
+          <h3>Integrações entre sistemas</h3>
+          <p>Conectamos ERPs, gateways, serviços de terceiros e sistemas legados para que tudo converse.</p>
+        </div>
+        <div class="card">
+          <span class="card-num">03</span>
+          <h3>Desenvolvimento de APIs</h3>
+          <p>APIs REST robustas, documentadas e seguras para web, mobile e integração com parceiros.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT HIGHLIGHT -->
+    <section class="product-band">
+      <div class="product-band-inner">
+        <div>
+          <span class="mono-label">// produto próprio</span>
+          <h2 class="product-band-title">EduGest</h2>
+          <p class="product-band-text">Sistema web para gestão de escolas e secretarias municipais de educação. Matrículas, turmas, frequência e relatórios em um só lugar.</p>
+          <button class="btn-ghost is-sm" data-go="produtos" style="margin-top:30px">Saiba mais →</button>
+        </div>
+        <div class="shot ratio">
+          <span class="shot-label">captura de tela — EduGest</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM TEASER -->
+    <section class="section">
+      <div class="section-head tight">
+        <div>
+          <span class="mono-label">// quem constrói</span>
+          <h2 class="section-title">Três sócios, uma equipe de desenvolvimento.</h2>
+        </div>
+        <button class="link-arrow" data-go="equipe">Conheça a equipe →</button>
+      </div>
+      <div class="team-row">
+        <div class="team-chip">
+          <span class="avatar">TL</span>
+          <span class="team-chip-text"><span class="team-chip-name">Thalyson Leonardo</span><span class="team-chip-role">Sócio · Dev</span></span>
+        </div>
+        <div class="team-chip">
+          <span class="avatar">AA</span>
+          <span class="team-chip-text"><span class="team-chip-name">Anderson Almeida</span><span class="team-chip-role">Sócio · Dev</span></span>
+        </div>
+        <div class="team-chip">
+          <span class="avatar">JW</span>
+          <span class="team-chip-text"><span class="team-chip-name">John Wilker</span><span class="team-chip-role">Sócio · Dev</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="cta-band">
+      <div class="cta-inner">
+        <h2 class="cta-title">Tem um sistema em mente? Vamos construir.</h2>
+        <p class="cta-sub">Conte o seu desafio e retornamos com uma proposta sob medida.</p>
+        <button class="btn-primary is-lg" data-go="contato" style="margin-top:34px">Falar com a AJT</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== SERVIÇOS ===================== -->
+  <main class="page" id="page-servicos">
+    <section class="page-hero with-border">
+      <span class="mono-label">// serviços</span>
+      <h1 class="page-title">Da ideia ao sistema em produção.</h1>
+      <p class="page-lead">Atuamos sob demanda para clientes de diversos segmentos — entendemos o problema, desenhamos a arquitetura e entregamos software que funciona.</p>
+    </section>
+
+    <section class="service-list">
+      <div class="service-row">
+        <div class="service-row-head"><span class="service-num">01</span><h2>Sistemas web sob demanda</h2></div>
+        <p>Aplicações web completas e sob medida, do MVP à operação em produção. Cuidamos de banco de dados, backend, interface e deploy — com código limpo e manutenível.</p>
+      </div>
+      <div class="service-row">
+        <div class="service-row-head"><span class="service-num">02</span><h2>Integrações entre sistemas</h2></div>
+        <p>Conectamos ERPs, meios de pagamento, serviços de terceiros e sistemas legados. Sincronização de dados e fluxos automatizados para eliminar trabalho manual.</p>
+      </div>
+      <div class="service-row">
+        <div class="service-row-head"><span class="service-num">03</span><h2>Desenvolvimento de APIs</h2></div>
+        <p>APIs REST robustas, documentadas e seguras para alimentar web, mobile e parceiros. Autenticação, versionamento e performance pensados desde o início.</p>
+      </div>
+      <div class="service-row">
+        <div class="service-row-head"><span class="service-num">04</span><h2>Produtos próprios &amp; SaaS</h2></div>
+        <p>Além do trabalho sob demanda, desenvolvemos e mantemos nossos próprios sistemas — como o EduGest — aplicando a mesma engenharia que entregamos aos clientes.</p>
+      </div>
+    </section>
+
+    <section class="process-band">
+      <div class="process-inner">
+        <span class="mono-label">// como trabalhamos</span>
+        <h2 class="process-title">Um processo direto, sem ruído.</h2>
+        <div class="process-grid">
+          <div class="process-card"><span class="num">01</span><h3>Descoberta</h3><p>Entendemos o problema, o contexto e os objetivos.</p></div>
+          <div class="process-card"><span class="num">02</span><h3>Arquitetura</h3><p>Definimos stack, estrutura de dados e plano de entrega.</p></div>
+          <div class="process-card"><span class="num">03</span><h3>Desenvolvimento</h3><p>Construímos em ciclos curtos, com entregas frequentes.</p></div>
+          <div class="process-card"><span class="num">04</span><h3>Entrega &amp; suporte</h3><p>Colocamos em produção e seguimos evoluindo o sistema.</p></div>
+        </div>
+        <div style="margin-top:48px"><button class="btn-primary is-md" data-go="contato">Solicitar orçamento</button></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== PRODUTOS ===================== -->
+  <main class="page" id="page-produtos">
+    <section class="page-hero">
+      <span class="mono-label">// produtos</span>
+      <h1 class="page-title">Software que nasce e cresce com a gente.</h1>
+      <p class="page-lead">Aplicamos a mesma engenharia dos projetos sob demanda nos nossos próprios produtos.</p>
+    </section>
+
+    <section class="section" style="padding-top:64px;padding-bottom:0">
+      <div class="product-card">
+        <div class="product-card-grid">
+          <div class="product-card-body">
+            <div class="eyebrow is-sm"><span class="dot"></span>Em operação</div>
+            <h2>EduGest</h2>
+            <p class="lead">Sistema web para gestão de escolas e secretarias municipais de educação. Centraliza a operação acadêmica do município em uma única plataforma.</p>
+            <div class="feature-list">
+              <span class="feature"><span class="arrow">›</span>Gestão de matrículas e alunos</span>
+              <span class="feature"><span class="arrow">›</span>Controle de turmas, professores e frequência</span>
+              <span class="feature"><span class="arrow">›</span>Painel para secretarias municipais de educação</span>
+              <span class="feature"><span class="arrow">›</span>Relatórios e indicadores de acompanhamento</span>
+              <span class="feature"><span class="arrow">›</span>Acesso web, multiusuário e seguro</span>
+            </div>
+            <button class="btn-primary is-sm" data-go="contato" style="margin-top:34px">Solicitar demonstração</button>
+          </div>
+          <div class="product-card-shot">
+            <span class="shot-label">captura de tela — painel EduGest</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:56px">
+      <div class="coming-soon">
+        <div>
+          <h3>Novos produtos em desenvolvimento</h3>
+          <p>Estamos sempre construindo. Quer ser avisado quando lançarmos algo novo — ou propor uma parceria?</p>
+        </div>
+        <button class="btn-ghost is-sm" data-go="contato">Entrar em contato →</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== EQUIPE ===================== -->
+  <main class="page" id="page-equipe">
+    <section class="page-hero">
+      <span class="mono-label">// equipe</span>
+      <h1 class="page-title">Os sócios que escrevem o código.</h1>
+      <p class="page-lead">Uma equipe enxuta de três desenvolvedores — todos sócios. Você fala diretamente com quem constrói o seu sistema.</p>
+    </section>
+
+    <section class="section" style="padding-top:56px">
+      <div class="team-grid">
+        <div class="member-card">
+          <span class="member-avatar">TL</span>
+          <h2 class="member-name">Thalyson Leonardo</h2>
+          <span class="member-role">Sócio · Desenvolvedor</span>
+          <p class="member-bio">Backend e arquitetura de sistemas, com foco em Ruby on Rails, modelagem de dados e integrações.</p>
+          <div class="tag-row"><span class="tag">Ruby</span><span class="tag">Rails</span><span class="tag">PostgreSQL</span></div>
+        </div>
+        <div class="member-card">
+          <span class="member-avatar">AA</span>
+          <h2 class="member-name">Anderson Almeida</h2>
+          <span class="member-role">Sócio · Desenvolvedor</span>
+          <p class="member-bio">Desenvolvimento full-stack e APIs, do banco de dados à interface, com JavaScript e TypeScript.</p>
+          <div class="tag-row"><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">React</span></div>
+        </div>
+        <div class="member-card">
+          <span class="member-avatar">JW</span>
+          <h2 class="member-name">John Wilker</h2>
+          <span class="member-role">Sócio · Desenvolvedor</span>
+          <p class="member-bio">Sistemas corporativos e integrações em Java, com atenção a performance, escala e confiabilidade.</p>
+          <div class="tag-row"><span class="tag">Java</span><span class="tag">APIs</span><span class="tag">Integrações</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== CONTATO ===================== -->
+  <main class="page" id="page-contato">
+    <section class="section" style="padding-top:92px;padding-bottom:96px">
+      <div class="contact-grid">
+        <div>
+          <span class="mono-label">// contato</span>
+          <h1 class="page-title" style="max-width:14ch;font-size:clamp(36px,5vw,58px)">Vamos conversar sobre o seu projeto.</h1>
+          <p class="contact-lead">Conte o que você precisa — sistema sob demanda, integração, API ou uma demonstração do EduGest. Respondemos o quanto antes.</p>
+          <div class="contact-meta">
+            <div>
+              <span class="meta-label">E-mail</span>
+              <a class="contact-email" href="mailto:faleconosco@ajtsistemas.com">faleconosco@ajtsistemas.com</a>
+            </div>
+            <div>
+              <span class="meta-label">Atuação</span>
+              <p>Sistemas web · Integrações · APIs · Produtos próprios</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <div class="sent-state" id="contact-sent" hidden>
+            <span class="sent-check">✓</span>
+            <h3>Mensagem pronta!</h3>
+            <p>Abrimos seu cliente de e-mail com a mensagem. Se preferir, escreva direto para <a href="mailto:ajtsistemaseservicos@gmail.com">ajtsistemaseservicos@gmail.com</a>.</p>
+          </div>
+          <form class="form" id="contact-form">
+            <label class="field"><span class="field-label">Nome</span><input name="nome" type="text" placeholder="Seu nome"></label>
+            <label class="field"><span class="field-label">E-mail</span><input name="email" type="email" placeholder="voce@empresa.com"></label>
+            <label class="field"><span class="field-label">Mensagem</span><textarea name="mensagem" rows="4" placeholder="Conte sobre o seu projeto…"></textarea></label>
+            <button class="btn-primary" type="submit">Enviar mensagem</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-logo" src="assets/ajt-logo-full.png" alt="AJT Sistemas e Serviços">
+          <p class="footer-desc">Desenvolvimento de sistemas web, integrações e APIs sob demanda.</p>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Navegação</span>
+          <button class="footer-link" data-go="inicio">Início</button>
+          <button class="footer-link" data-go="servicos">Serviços</button>
+          <button class="footer-link" data-go="produtos">Produtos</button>
+          <button class="footer-link" data-go="equipe">Equipe</button>
+          <button class="footer-link" data-go="contato">Contato</button>
+        </div>
+        <div class="footer-col">
+          <span class="footer-col-title">Contato</span>
+          <a class="footer-link break" href="mailto:faleconosco@ajtsistemas.com">faleconosco@ajtsistemas.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-meta">© <span id="year">2026</span> AJT Sistemas e Serviços</span>
+        <span class="footer-meta">Ruby · JavaScript · Java</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
