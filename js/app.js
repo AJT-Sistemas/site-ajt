@@ -1,13 +1,14 @@
 /* ===================================================================
    AJT Sistemas e Serviços — client logic
-   Hash routing, active-nav state, year stamp and contact form.
-   Ported from the Claude Design component's DCLogic class.
+   Hash routing, active-nav state, year stamp, contact form,
+   theme switcher and mobile menu toggle.
    =================================================================== */
 (function () {
   'use strict';
 
   var PAGES = ['inicio', 'servicos', 'produtos', 'equipe', 'contato'];
 
+  // --- HASH ROUTING ---
   function currentPage() {
     var h = (location.hash || '').replace('#', '');
     return PAGES.indexOf(h) !== -1 ? h : 'inicio';
@@ -28,7 +29,6 @@
     try { window.scrollTo(0, 0); } catch (e) {}
   }
 
-  // Navigation: clicking the same page scrolls to top, otherwise updates the hash.
   function go(p) {
     var cur = (location.hash || '').replace('#', '');
     if (cur === p) {
@@ -36,6 +36,8 @@
     } else {
       location.hash = p;
     }
+    // Close mobile menu if open
+    closeMobileMenu();
   }
 
   document.addEventListener('click', function (e) {
@@ -47,7 +49,51 @@
 
   window.addEventListener('hashchange', render);
 
-  // Contact form -> opens the user's mail client, then shows confirmation.
+  // --- MOBILE MENU ---
+  var menuToggle = document.querySelector('.menu-toggle');
+  var navContainer = document.querySelector('.nav-container');
+
+  if (menuToggle && navContainer) {
+    menuToggle.addEventListener('click', function () {
+      menuToggle.classList.toggle('open');
+      navContainer.classList.toggle('open');
+    });
+  }
+
+  function closeMobileMenu() {
+    if (menuToggle && navContainer) {
+      menuToggle.classList.remove('open');
+      navContainer.classList.remove('open');
+    }
+  }
+
+  // --- THEME ACCENT SWITCHER ---
+  var DEFAULT_ACCENT = 'violeta';
+
+  function applyAccent(accentName) {
+    document.documentElement.setAttribute('data-accent', accentName);
+    localStorage.setItem('ajt-accent', accentName);
+    
+    // Update active button state
+    document.querySelectorAll('[data-accent-btn]').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-accent-btn') === accentName);
+    });
+  }
+
+  // Initialize Theme
+  var savedAccent = localStorage.getItem('ajt-accent') || DEFAULT_ACCENT;
+  applyAccent(savedAccent);
+
+  // Bind Switcher Click Events
+  document.querySelectorAll('[data-accent-btn]').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var accent = btn.getAttribute('data-accent-btn');
+      applyAccent(accent);
+    });
+  });
+
+  // --- CONTACT FORM ---
   var form = document.getElementById('contact-form');
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -67,7 +113,7 @@
     });
   }
 
-  // Footer year.
+  // --- FOOTER YEAR ---
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
